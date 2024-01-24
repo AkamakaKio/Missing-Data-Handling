@@ -1,0 +1,13 @@
+import pandas as pd
+
+# Read CSV file
+data = pd.read_csv('your_data.csv')
+
+# Check for missing values
+missing_values = data.isnull().sum()
+
+# Replace missing values with mean
+data.fillna(data.mean(), inplace=True)
+
+# Display the updated dataset
+print(data)
